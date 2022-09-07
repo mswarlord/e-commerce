@@ -5,7 +5,8 @@
 
 .App {
   text-align: center;
-  background-color: grey;
+  background-color: white;
   width: 100vw;
   height: 100vh;
+  color: lightblue
 }
