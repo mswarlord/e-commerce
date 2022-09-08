@@ -4,9 +4,9 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import 'bootstrap/dist/css/bootstrap.min.css';
-//import CartWidget from '../CartWidget';
+import CartWidget from '../../CartWidget/CartWidget';
 
-function NavBar() {
+const NavBar = () => {
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
@@ -28,7 +28,7 @@ function NavBar() {
                 <Nav>
                 <Nav.Link href="#">Iniciar Sesión</Nav.Link>
                 <Nav.Link eventKey={2} href="#memes">
-                    {/* <CartWidget /> */}
+                    <CartWidget />
                 </Nav.Link>
                 </Nav>
             </Navbar.Collapse>
