@@ -12,25 +12,28 @@
     left: 0;
     right: 0;
     font-size: x-large;
-    top: 75px;
-    background: -webkit-linear-gradient(right, #c02425, #f0cb35);
+    top: 90px;
+    background: -webkit-linear-gradient(right, #ac1106, #fcd640);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-weight: 900;
 }
 
 .subtitulo{
     position: absolute;
     z-index: 1;
-    top: 110px;
+    top: 120px;
     text-align: center;
     left: 0;
     right: 0;
-    font-size: large;
+    font-size:medium;
     background: -webkit-linear-gradient(right, #c02425, #f0cb35);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
+    font-weight: 600;
+    opacity: 95%;
 }
 
 .logo1{

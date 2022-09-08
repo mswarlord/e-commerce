@@ -1,10 +1,12 @@
 import './App.css';
-import Logo from './components/Logo/Logo';
+import Header from './components/Header/Header';
+import NavBar from './components/NavBar/NavBar';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <Logo />
+      <Header />
+      <NavBar />
     </div>
   );
 }
