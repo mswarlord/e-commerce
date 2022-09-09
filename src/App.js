@@ -8,7 +8,8 @@ const App = () => {
     <div className="App">
       <Header />
       <NavBar />
-      <ItemListContainer />
+      <ItemListContainer greeting="Mas Vendidos"/>
+      <ItemListContainer greeting="En Proceso"/>
     </div>
   );
 }
