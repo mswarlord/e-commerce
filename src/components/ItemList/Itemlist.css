@@ -1,0 +1,7 @@
+.itemList{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 1em;
+    gap: 1rem;
+    justify-items: center;
+}

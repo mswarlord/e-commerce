@@ -1,0 +1,13 @@
+.ItemDetail{margin-top: 0.3em;
+    background: linear-gradient(235deg, #292929 0%, #383838 47%, #4f4f4f 100%);
+    width: 15em;
+    height: 20em;
+    width: 200px;
+    border-radius: 12px;
+    color: aliceblue;
+    font-size: 0.8em;
+    position: relative;
+    transition: 0.3s;
+    border: 0px;
+    box-shadow: 0.4em 0.2em 1em #11111188
+}
