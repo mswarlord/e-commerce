@@ -3,13 +3,14 @@ import { useState } from 'react';
 import './ItemCount.css';
 
 const ItemCount = ({ onAdd, initial, stock }) => {
-    initial = Number(initial);
-    stock = Number(stock);
-    const [qty, setQty] = useState(initial);
-    const addProduct = (num) => {
+  initial = Number(initial);
+  stock = Number(stock);
+  const [qty, setQty] = useState(initial);
+  
+  const addProduct = (num) => {
     setQty(qty + num);
-    };
-
+  };
+  
     return (
     <div className="contenedor__contador">
         <div className="contenedor__contador--contador">

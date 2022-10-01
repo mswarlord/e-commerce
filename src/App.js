@@ -9,7 +9,6 @@ const App = () => {
       <Header />
       <NavBar />
       <ItemListContainer greeting="Mas Vendidos"/>
-      <ItemListContainer greeting="En Proceso"/>
     </div>
   );
 }

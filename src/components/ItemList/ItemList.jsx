@@ -1,12 +1,32 @@
-import React from 'react'
-import './Itemlist.css'
-import ItemDetail from '../ItemDetail/ItemDetail'
+import React from 'react';
+import './Itemlist.css';
+import ItemDetail from '../Item/Item';
+import {getProductos} from '../../asyncMock';
+import { useState, useEffect } from 'react';
+import Loader from '../Loader/Loader';
 const ItemList = () => {
-  return (
+    const [productos, setProductos] = useState([])
+    const [loading, setLoading] = useState(true)
+
+    useEffect(() => {
+        getProductos().then((resolve)=>{
+            setProductos(resolve)
+        }).finally(()=>{
+            setLoading(false)
+        })
+    }, [])
+
+    if(loading){
+        return <Loader />
+    }else{
+
+    };
+
+
+    const productosListados = productos.map(prod => <ItemDetail nombreProducto={prod.nombre} stockDisponible={prod.stock} />)
+    return (
     <div className='itemList'>
-        <ItemDetail stockDisponible={5} />
-        <ItemDetail stockDisponible={2}  />
-        <ItemDetail stockDisponible={1}  />
+        {productosListados}
     </div>
   )
 }

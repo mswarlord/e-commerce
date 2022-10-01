@@ -1,17 +1,17 @@
 import React from 'react'
-import './ItemDetail.css'
+import './Item.css'
 import ItemCount from '../ItemCount/ItemCount'
 
 
 
-const ItemDetail = ({nombreProducto, stockDisponible}) => {
+const Item = ({nombreProducto, stockDisponible}) => {
 
     const onAdd = (qty) => {
         alert(`Agregaste ${qty} productos`);
     };
 
     return (
-        <div className='ItemDetail'>
+        <div className='Item'>
             <h3>{nombreProducto}</h3>
             <ItemCount onAdd={onAdd} initial={1} stock={stockDisponible} />
         </div>
@@ -19,4 +19,4 @@ const ItemDetail = ({nombreProducto, stockDisponible}) => {
 
 }
 
-export default ItemDetail
+export default Item

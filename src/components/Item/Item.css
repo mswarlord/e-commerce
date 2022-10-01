@@ -1,4 +1,5 @@
-.ItemDetail{margin-top: 0.3em;
+.Item{
+    margin-top: 0.3em;
     background: linear-gradient(235deg, #292929 0%, #383838 47%, #4f4f4f 100%);
     width: 15em;
     height: 20em;
