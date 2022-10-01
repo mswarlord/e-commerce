@@ -1,9 +1,10 @@
 import React from 'react';
 import './Itemlist.css';
-import ItemDetail from '../Item/Item';
+import Item from '../Item/Item';
 import {getProductos} from '../../asyncMock';
 import { useState, useEffect } from 'react';
 import Loader from '../Loader/Loader';
+
 const ItemList = () => {
     const [productos, setProductos] = useState([])
     const [loading, setLoading] = useState(true)
@@ -18,12 +19,11 @@ const ItemList = () => {
 
     if(loading){
         return <Loader />
-    }else{
-
     };
 
 
-    const productosListados = productos.map(prod => <ItemDetail nombreProducto={prod.nombre} stockDisponible={prod.stock} />)
+    const productosListados = productos.map(prod => <Item nombreProducto={prod.nombre} stockDisponible={prod.stock} imgURL={prod.img} />)
+
     return (
     <div className='itemList'>
         {productosListados}

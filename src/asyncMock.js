@@ -5,7 +5,7 @@ const productos = [
         precio: 800,
         categoria: 'Accesorios',
         material: 'PLA+',
-        img: '../public/assets/img/',
+        img: './assets/img/riel-picatinny.jpg',
         stock: 5,
         descripcion: 'Riel Picatinny para Pietro Beretta FS92 impreso en PLA+. Altura de capa 0.12mm y relleno 100% para mayor resistencia'
     },
@@ -15,7 +15,7 @@ const productos = [
         precio: 250,
         categoria: 'Accesorios',
         material: 'PLA+',
-        img: '../public/assets/img/',
+        img: './assets/img/tapa-beretta.jpg',
         stock: 10,
         descripcion: 'Tapa de Resorte de martillo para Pietro Beretta FS92 impreso en PLA+. Altura de capa 0.12mm y relleno 100% para mayor resistencia'
     },
@@ -25,7 +25,7 @@ const productos = [
         precio: 3500,
         categoria: 'Escultura',
         material: 'PLA+',
-        img: '../public/assets/img/',
+        img: './assets/img/busto-san-martin.jpg',
         stock: 1,
         descripcion: 'Busto Gral. Don José de San Martín, Pintado a Mano con gran detalle, Altura de Capa 0.12mm, Máxima Definición'
     },
@@ -35,7 +35,7 @@ const productos = [
         precio: 2000,
         categoria: 'Escultura',
         material: 'PLA+',
-        img: '../public/assets/img/',
+        img: './assets/img/busto-san-martin.jpg',
         stock: 2,
         descripcion: 'Busto Gral. Don José de San Martín, Altura de Capa 0.12mm, Máxima Definición'
     },
@@ -45,7 +45,7 @@ const productos = [
         precio: 3500,
         categoria: 'Hogar',
         material: 'PLA+',
-        img: '../public/assets/img/',
+        img: './assets/img/maceta-baby-groot.jpg',
         stock: 2,
         descripcion: 'Maceta Baby Groot, altura 20cm, Pintado a Mano con gran detalle, Altura de Capa 0.12mm, Máxima Definición'
     }
@@ -55,6 +55,6 @@ export const getProductos = () => {
     return new Promise((resolve) => {
         setTimeout(()=>{
             resolve(productos)
-        }, 2000)
+        }, 2500)
     })
 }

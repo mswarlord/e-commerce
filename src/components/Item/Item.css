@@ -1,14 +1,32 @@
 .Item{
-    margin-top: 0.3em;
-    background: linear-gradient(235deg, #292929 0%, #383838 47%, #4f4f4f 100%);
-    width: 15em;
-    height: 20em;
-    width: 200px;
-    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 0.3rem;
+    background: linear-gradient(235deg, #1d1d1d 0%, #383838 47%, #686868 100%);
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
     color: aliceblue;
-    font-size: 0.8em;
+    font-size: 0.8rem;
     position: relative;
-    transition: 0.3s;
     border: 0px;
-    box-shadow: 0.4em 0.2em 1em #11111188
+    box-shadow: 0.4rem 0.2rem 1rem #11111188;
+    overflow: hidden;
+}
+.nombreProducto{
+    height: 5em;
+    padding: 0.8em;
+}
+.nombreProducto h3{
+    font-size: large;
+    font-weight: bold;
+    color: #ffab8c;
+}
+.detalleProducto{
+    height: 5.5rem;
+}
+.imagenProducto{
+    width: 100%;
+
 }
