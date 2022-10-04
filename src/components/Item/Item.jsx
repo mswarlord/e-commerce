@@ -4,17 +4,18 @@ import ItemCount from '../ItemCount/ItemCount'
 
 
 
-const Item = ({nombreProducto, stockDisponible, imgURL}) => {
+const Item = ({nombreProducto, stockDisponible, imgURL, ofertaProducto, descuentoProducto}) => {
 
     const onAdd = (qty) => {
         alert(`Agregaste ${qty} productos`);
     };
-    
+
+    const descuentoOferta = ofertaProducto ? 'nombreProducto oferta': 'nombreProducto'
 
     return (
         <div className='Item'>
-            <div  className='nombreProducto'>
-                <h3>{nombreProducto}</h3>
+            <div  className={descuentoOferta}>
+                <h3><span className=''>{nombreProducto}</span></h3>
             </div>
             <img src={imgURL} alt="" className='imagenProducto' />
             <div className='detalleProducto'>

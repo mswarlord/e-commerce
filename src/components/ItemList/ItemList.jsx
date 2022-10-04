@@ -22,13 +22,13 @@ const ItemList = () => {
     };
 
 
-    const productosListados = productos.map(prod => <Item nombreProducto={prod.nombre} stockDisponible={prod.stock} imgURL={prod.img} />)
+    const productosListados = productos.map(prod => <Item key={prod.id} ofertaProducto={prod.oferta} descuentoProducto={prod.descuento} nombreProducto={prod.nombre} stockDisponible={prod.stock} imgURL={prod.img} />)
 
     return (
     <div className='itemList'>
         {productosListados}
     </div>
-  )
+    )
 }
 
 export default ItemList;
