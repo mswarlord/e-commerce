@@ -125,6 +125,14 @@ export const getProductos = () => {
     return new Promise((resolve) => {
         setTimeout(()=>{
             resolve(productos)
-        }, 2500)
+        }, 2000)
+    })
+}
+
+export const getProductoById = (id) => {
+    return new Promise((resolve)=>{
+        setTimeout(()=>{
+            resolve(productos.find(prod => prod.id === id))
+        },2000)
     })
 }

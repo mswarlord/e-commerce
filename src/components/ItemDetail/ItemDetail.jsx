@@ -1,19 +1,21 @@
 import React from 'react'
 import './ItemDetail.css'
 
-const ItemDetail = (prod) => {
+const ItemDetail = ({producto}) => {
   return (
     <div className='detalleItem'>
-        <div className='tituloProducto'>
-            <h2>{prod.nombre} TITULO</h2>
-        </div>
         <div className='contenedorDetalle'>
             <div className='imagenProducto'>
-                IMAGEN
-                <img src={prod.imgURL} alt="" />
+                <img src={producto.img} alt="" />
             </div>
             <div className='detalle'>
-                detalle
+                <div className='tituloProducto'>
+                    <h2>{producto.nombre}</h2>
+                </div>
+                <h3><span className='detalleDescripcion'>{producto.descripcion}</span></h3>
+                <h3><span className='detalleAtributo'>Precio:</span> ${producto.precio}</h3>
+                <h4><span className='detalleAtributo'>Material:</span> {producto.material}</h4>
+                <h4><span className='detalleAtributo'>Stock:</span> {producto.stock}</h4>
             </div>
         </div>
     </div>

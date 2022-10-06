@@ -11,6 +11,7 @@
     border: 0px;
     box-shadow: 0.4rem 0.2rem 1rem #11111188;
     overflow: hidden;
+    text-align: left;
 }
 
 .contenedorDetalle{
@@ -26,11 +27,28 @@
     width: 300px;
     height: 300px;
     border-radius: 0.4rem;
-    background: linear-gradient(235deg, #8a8 0%, #88a 47%, #a88 100%);
+    /* background: linear-gradient(235deg, #8a8 0%, #88a 47%, #a88 100%); */
+    display: flex;
+    align-items: center;
 }
-
+.imagenProducto img{
+    width: 100%;
+    border-radius: 0.4rem;
+}
 .detalle{
     background: linear-gradient(235deg, #8a8 0%, #88a 47%, #a88 100%);
     width: 100%;
     height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0 1em;
+}
+
+.detalleDescripcion{
+    color: black;
+}
+
+.detalleAtributo{
+    color: #333;
 }

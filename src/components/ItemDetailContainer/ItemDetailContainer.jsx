@@ -1,12 +1,29 @@
 import React from 'react'
-import ItemDetail from '../ItemDetail/ItemDetail';
 import './ItemDetailContainer.css'
+import ItemDetail from '../ItemDetail/ItemDetail';
+import {getProductoById} from '../../asyncMock';
+import { useState, useEffect } from 'react';
+import Loader from '../Loader/Loader';
 
 const ItemDetailContainer = () => {
+  const [producto, setProducto] = useState([])
+  const [loading, setLoading] = useState(true)
+
+    useEffect(() => {
+        getProductoById(5).then((resolve)=>{
+            setProducto(resolve)
+        }).finally(()=>{
+            setLoading(false)
+        })
+    }, [])
+
+    if(loading){
+        return <Loader />
+    };
+
   return (
     <div className='itemDetailContainer'>
-        <h1>Item Detail Container</h1>
-        <ItemDetail />
+        <ItemDetail producto={producto} />
     </div>
   )
 }
