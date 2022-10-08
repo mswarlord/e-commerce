@@ -20,18 +20,17 @@
     gap: 1em;
 }
 .tituloProducto{
-    color: aqua;
+    color: #eef;
 }
 
-.imagenProducto{
+.imagenDetailProducto{
     width: 300px;
     height: 300px;
     border-radius: 0.4rem;
-    /* background: linear-gradient(235deg, #8a8 0%, #88a 47%, #a88 100%); */
     display: flex;
     align-items: center;
 }
-.imagenProducto img{
+.imagenDetailProducto img{
     width: 100%;
     border-radius: 0.4rem;
 }

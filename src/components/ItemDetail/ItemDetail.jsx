@@ -1,24 +1,34 @@
 import React from 'react'
 import './ItemDetail.css'
+import ItemCount from '../ItemCount/ItemCount'
 
-const ItemDetail = ({producto}) => {
-  return (
-    <div className='detalleItem'>
+const ItemDetail = ({id, img, nombre, descripcion, precio, material, stock, categoria}) => {
+    
+    const onAdd = (qty) => {
+        alert(`Agregaste ${qty} productos`);
+    };
+
+    return (
+    <article className='detalleItem'>
         <div className='contenedorDetalle'>
-            <div className='imagenProducto'>
-                <img src={producto.img} alt="" />
+            <div className='imagenDetailProducto'>
+                <picture>
+                    <img src={img} alt={nombre} />
+                </picture>
             </div>
             <div className='detalle'>
                 <div className='tituloProducto'>
-                    <h2>{producto.nombre}</h2>
+                    <h2>{nombre}</h2>
                 </div>
-                <h3><span className='detalleDescripcion'>{producto.descripcion}</span></h3>
-                <h3><span className='detalleAtributo'>Precio:</span> ${producto.precio}</h3>
-                <h4><span className='detalleAtributo'>Material:</span> {producto.material}</h4>
-                <h4><span className='detalleAtributo'>Stock:</span> {producto.stock}</h4>
+                <h3><span className='detalleDescripcion'>{descripcion}</span></h3>
+                <h3><span className='detalleAtributo'>Precio:</span> ${precio}</h3>
+                <h4><span className='detalleAtributo'>Material:</span> {material}</h4>
+                <h4><span className='detalleAtributo'>Stock:</span> {stock}</h4>
+                <h4><span className='detalleAtributo'>Categoría:</span> {categoria}</h4>
             </div>
+            <ItemCount onAdd={onAdd} initial={1} stock={stock} />
         </div>
-    </div>
+    </article>
   )
 }
 
