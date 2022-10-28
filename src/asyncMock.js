@@ -169,7 +169,7 @@ const productos = [{
         descripcion: 'Soporte para Joystick Ps PC X-Box. Altura de Capa 0.2mm.'
     },
     {
-        id: '12',
+        id: '14',
         nombre: 'Soporte Cptn Price',
         precio: 4000,
         oferta: false,
@@ -181,7 +181,7 @@ const productos = [{
         descripcion: 'Soporte para Joystick Ps PC X-Box. Altura de Capa 0.2mm.'
     },
     {
-        id: '12',
+        id: '15',
         nombre: 'Soporte Darth Vader',
         precio: 4000,
         oferta: false,
@@ -193,7 +193,7 @@ const productos = [{
         descripcion: 'Soporte para Joystick Ps PC X-Box. Altura de Capa 0.2mm.'
     },
     {
-        id: '12',
+        id: '16',
         nombre: 'Soporte Deadpool',
         precio: 4000,
         oferta: false,
@@ -205,7 +205,7 @@ const productos = [{
         descripcion: 'Soporte para Joystick Ps PC X-Box. Altura de Capa 0.2mm.'
     },
     {
-        id: '12',
+        id: '17',
         nombre: 'Soporte Optimus Prime',
         precio: 4000,
         oferta: false,
@@ -217,7 +217,7 @@ const productos = [{
         descripcion: 'Soporte para Joystick Ps PC X-Box. Altura de Capa 0.2mm.'
     },
     {
-        id: '12',
+        id: '18',
         nombre: 'Soporte Storm Trooper',
         precio: 4000,
         oferta: false,
@@ -229,7 +229,7 @@ const productos = [{
         descripcion: 'Soporte para Joystick Ps PC X-Box. Altura de Capa 0.2mm.'
     },
     {
-        id: '12',
+        id: '19',
         nombre: 'Soporte Venom',
         precio: 4000,
         oferta: false,

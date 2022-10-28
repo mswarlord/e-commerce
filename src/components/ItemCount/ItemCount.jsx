@@ -1,12 +1,23 @@
-import React from 'react';
-import { useState } from 'react';
 import './ItemCount.css';
+import { useState } from 'react';
 
 const ItemCount = ({ onAdd, initial, stock }) => {
   initial = Number(initial);
   stock = Number(stock);
   const [qty, setQty] = useState(initial);
   
+/*   const increment = () => { 
+    if( qty < stock ){
+      setQty( qty+1 )
+    }
+  }
+  
+  const Decrement = () => { 
+    if( qty > 1 ){
+      setQty( qty - 1 )
+    }
+  } */
+
   const addProduct = (num) => {
     setQty(qty + num);
   };

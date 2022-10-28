@@ -1,18 +1,30 @@
-import React from 'react'
 import './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount'
+import { useContext } from 'react'
+import { CartContext } from '../../context/CartContext'
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
-const ItemDetail = ({id, img, nombre, descripcion, precio, material, stock, categoria}) => {
-const [endPurchase, setEndPurchase] = useState(false)
+import { NotificationContext } from '../../notification/NotificationService'
+
+const ItemDetail = ({ id, img, nombre, descripcion, precio, material, stock, categoria}) => {
+
+    const { addItem } = useContext(CartContext);
+    const { setNotification } = useContext(NotificationContext);
+
+    const [endPurchase, setEndPurchase] = useState(false);
 
     const onAdd = (qty) => {
         setEndPurchase(true);
-        /* const productToAdd ={
+
+        const productToAdd ={
             id, nombre, precio, qty
         }
-        console.log(productToAdd); */
-        alert(`Agregaste ${qty} productos`);
+        console.log(productToAdd);
+
+        //alert(`Agregaste ${qty} productos`);
+
+        addItem( productToAdd )
+        setNotification('success', `Se Agregó correctamente ${qty} ${nombre}`)
     };
 
     return (
