@@ -1,17 +1,8 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import './Item.css'
-import ItemCount from '../ItemCount/ItemCount'
 import { Link } from 'react-router-dom'
-import { CartContext } from '../../context/CartContext'
 
-
-const Item = ({id, nombreProducto, stockDisponible, imgURL, ofertaProducto, precio}) => {
-
-    const value = useContext(CartContext)
-    console.log(value)
-    const onAdd = (qty) => {
-        alert(`Agregaste ${qty} productos`);
-    };
+const Item = ({id, nombreProducto, imgURL, ofertaProducto, precio}) => {
 
     const descuentoOferta = ofertaProducto ? 'nombreProducto oferta': 'nombreProducto'
 
@@ -30,9 +21,6 @@ const Item = ({id, nombreProducto, stockDisponible, imgURL, ofertaProducto, prec
                     ${precio}
                 </p>
             </section>
-            <footer className='detalleProducto'>
-                <ItemCount onAdd={onAdd} initial={1} stock={stockDisponible} />
-            </footer>
         </article>
 )
 }
