@@ -7,7 +7,7 @@ const CartWidget = () => {
     
     const quantity = getQuantity();
     
-    console.log("cantidad " + quantity)
+    /* console.log("cantidad " + quantity) */
     
     return (
         <div to='/cart' className='cartContainer'>

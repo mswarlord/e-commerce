@@ -8,6 +8,7 @@ import { Cart } from './components/Cart/Cart';
 import { BrowserRouter, Routes, Route} from "react-router-dom";
 import { CartProvider } from './context/CartContext';
 import { NotificationProvider } from './notification/NotificationService';
+import Checkout from './components/Checkout/Checkout';
 const App = () => {
 
   return (
@@ -20,8 +21,10 @@ const App = () => {
             <Routes>
               <Route path='/' element={<ItemListContainer greeting="Mas Vendidos"/>} /> 
               <Route path='/category/:category' element={<ItemListContainer />} />
+              <Route path='/contact' element={<h1>Contacto</h1>  } />
               <Route path='/detail/:IdProducto' element={<ItemDetailContainer />} />
-              <Route path='/Cart' element={<Cart />} />
+              <Route path='/cart' element={<Cart />} />
+              <Route path='/checkout' element={<Checkout />} />
               <Route path='*' element={<h1>ERROR 404 NOT FOUND</h1> } />
             </Routes>
           </BrowserRouter>
