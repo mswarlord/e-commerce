@@ -1,14 +1,14 @@
 import './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount'
 import { useContext } from 'react'
-import { CartContext } from '../../context/CartContext'
+import { useCartContext } from '../../context/CartContext'
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { NotificationContext } from '../../notification/NotificationService'
 
 const ItemDetail = ({ id, img, nombre, descripcion, precio, material, stock, categoria}) => {
 
-    const { addItem } = useContext(CartContext);
+    const { addItem } = useCartContext();
     const { setNotification } = useContext(NotificationContext);
 
     const [endPurchase, setEndPurchase] = useState(false);
@@ -17,11 +17,8 @@ const ItemDetail = ({ id, img, nombre, descripcion, precio, material, stock, cat
         setEndPurchase(true);
 
         const productToAdd ={
-            id, nombre, precio, qty
+            id, nombre, precio, qty, img 
         }
-        console.log(productToAdd);
-
-        //alert(`Agregaste ${qty} productos`);
 
         addItem( productToAdd )
         setNotification('success', `Se Agregó correctamente ${qty} ${nombre}`)
@@ -30,7 +27,7 @@ const ItemDetail = ({ id, img, nombre, descripcion, precio, material, stock, cat
     return (
     <article className='detalleItem'>
             
-            <picture className='imagenDetailProducto'>
+            <picture className='imagenDetailContainer'>
                 <img src={img} alt={nombre} />
             </picture>
             

@@ -18,6 +18,7 @@ const ItemListContainer = ({greeting}) => {
     useEffect(() => {
         setLoading(true)
 
+
         const collectionRef = category 
         ?  query(collection(db, 'productos'), where('categoria', '==', category))
         : collection(db, 'productos') //llamo a la colleccion productos en la base de datos db de firebase

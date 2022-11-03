@@ -19,7 +19,7 @@ const App = () => {
             <Header />
             <NavBar />
             <Routes>
-              <Route path='/' element={<ItemListContainer greeting="Mas Vendidos"/>} /> 
+              <Route path='/' element={<ItemListContainer greeting="Bienvenidos a Tres Bestiones, tu lugar de impresión 3D"/>} /> 
               <Route path='/category/:category' element={<ItemListContainer />} />
               <Route path='/contact' element={<h1>Contacto</h1>  } />
               <Route path='/detail/:IdProducto' element={<ItemDetailContainer />} />

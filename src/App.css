@@ -1,40 +1,26 @@
-*{
-  margin: 0;
-  padding: 0;
+* {
+    margin: 0;
+    padding: 0;
 }
 
 .App {
-  text-align: center;
-  width: 100%;
+    text-align: center;
+    width: 100%;
 }
 
-.oferta{
-  background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
-                radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+.oferta {
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%), radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
 }
-.goldenBackground{
-  background-color: #0b1826;
+
+.goldenBackground {
+    background-color: #0b1826;
 }
-.goldenString{ /* colocar en un string dentro de un SPAN  */
-    /*position: absolute;
-    transform: translate(-50%,-50%);
-    top: 50%;
-    left: 50%;
-    letter-spacing: 5px;
-    font-size: 150px; */
-    font-family: 'Times New Roman',serif;
+
+.goldenString {
+    font-family: 'Times New Roman', serif;
     font-weight: bold;
-    background-image: linear-gradient(
-      to right,
-      #462523 0,
-      #cb9b51 22%, 
-      #f6e27a 45%,
-      #f6f2c0 50%,
-      #f6e27a 55%,
-      #cb9b51 78%,
-      #462523 100%
-    );
-    color:transparent;
-    background-clip:text;
-    -webkit-background-clip:text;
+    background-image: linear-gradient( to right, #462523 0, #cb9b51 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #462523 100%);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
 }

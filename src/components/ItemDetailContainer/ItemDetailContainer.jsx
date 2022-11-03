@@ -15,9 +15,7 @@ const ItemDetailContainer = ({ setCart }) => {
     const docRef = doc(db, 'productos', IdProducto)
 
     getDoc(docRef).then( resolve => {
-      //console.log(resolve)
       const data = resolve.data()
-      //console.log("data: "+data)
       const productAdapted = { id: resolve.id, ...data}
       setProducto(productAdapted)
         }).finally(()=>{

@@ -8,7 +8,7 @@ export const ItemCart = ({product}) => {
     return(
         <div className="ItemCart">
             <div className="imgItemCart">
-            <img src={product.img} alt={product.nombre} />
+                <img src={product.img} alt={product.nombre} />
             </div>
             <div className="detailItemCart">
                 <div>Producto: {product.nombre}</div>

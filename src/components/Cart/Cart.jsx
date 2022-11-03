@@ -9,10 +9,12 @@ export const Cart = () => {
 
     if(cart.length === 0){
         return (
-            <>
-                <p>No se agregaron elementos al carrito.</p>
-                <Link to='/'>Comenzar a comprar</Link>
-            </>
+            <div className='EmptyCart'>
+                <br />
+                <h2>Tu carrito está vacío</h2>
+                <br />
+                <h3>¿No sabés qué comprar? <Link to='/'>haz click aquí</Link></h3>
+            </div>
         )
     }else{
         return (
