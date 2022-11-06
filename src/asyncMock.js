@@ -33,21 +33,7 @@ const productos = [{
         img: '../assets/img/busto-san-martin.jpg',
         stock: 1,
         descripcion: 'Busto Gral. Don José de San Martín, Pintado a Mano con gran detalle, Altura de Capa 0.12mm, Máxima Definición'
-    }
-    /* ,
-        {
-            id: '4',
-            nombre: 'Busto San Martín',
-            precio: 2000,
-            oferta: false,
-            descuento: undefined,
-            categoria: 'esculturas',
-            material: 'PLA+',
-            img: '../assets/img/busto-san-martin.jpg',
-            stock: 2,
-            descripcion: 'Busto Gral. Don José de San Martín, Altura de Capa 0.12mm, Máxima Definición'
-        } */
-    ,
+    },
     {
         id: '4',
         nombre: 'Maceta Baby Groot',

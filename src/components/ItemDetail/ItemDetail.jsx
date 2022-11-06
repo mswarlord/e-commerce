@@ -17,7 +17,7 @@ const ItemDetail = ({ id, img, nombre, descripcion, precio, material, stock, cat
         setEndPurchase(true);
 
         const productToAdd ={
-            id, nombre, precio, qty, img 
+            id, nombre, precio, qty, img, descripcion 
         }
 
         addItem( productToAdd )
@@ -31,7 +31,6 @@ const ItemDetail = ({ id, img, nombre, descripcion, precio, material, stock, cat
                 <img src={img} alt={nombre} />
             </picture>
             
-            
             <div className='detalle'>
                 <div className='tituloProducto'>
                     <h2>{nombre}</h2>
@@ -41,20 +40,21 @@ const ItemDetail = ({ id, img, nombre, descripcion, precio, material, stock, cat
                 <h4><span className='detalleAtributo'>Material:</span> {material}</h4>
                 <h4><span className='detalleAtributo'>Stock:</span> {stock}</h4>
                 <h4><span className='detalleAtributo'>Categoría:</span> {categoria}</h4>
-            </div>
-        {
-            endPurchase ?
-            <div className='detalleBotonera'>
-                <NavLink to="/">
-                    <button>Seguir comprando</button>
-                </NavLink>
-                <NavLink to="/cart">
-                    <button>Finalizar compra</button>
-                </NavLink>
-            </div>
-            :
-            <div className='contadorDetalle'> <ItemCount onAdd={onAdd} initial={1} stock={stock} /> </div>
-        } 
+            
+                {
+                    endPurchase ?
+                    <div className='detalleBotonera'>
+                        <NavLink to="/">
+                            <button>Seguir comprando</button>
+                        </NavLink>
+                        <NavLink to="/cart">
+                            <button>Finalizar compra</button>
+                        </NavLink>
+                    </div>
+                    :
+                    <div className='contadorDetalle'> <ItemCount onAdd={onAdd} initial={1} stock={stock} /> </div>
+                } 
+        </div>
     </article>
     )
 }

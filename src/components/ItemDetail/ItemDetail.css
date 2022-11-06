@@ -36,7 +36,6 @@
 }
 
 .detalle {
-    background: #995;
     width: 100%;
     height: auto;
     display: flex;
@@ -72,9 +71,9 @@ h4 {
 .detalleBotonera {
     display: flex;
     padding: 1em;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    justify-content: space-evenly;
 }
 
 .detalleBotonera button {
@@ -87,6 +86,6 @@ h4 {
 }
 
 .detalleBotonera button:hover {
-    color: #213;
+    color: #ddd;
     transform: scale(1.1);
 }

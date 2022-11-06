@@ -21,7 +21,7 @@ const App = () => {
             <Routes>
               <Route path='/' element={<ItemListContainer greeting="Bienvenidos a Tres Bestiones, tu lugar de impresión 3D"/>} /> 
               <Route path='/category/:category' element={<ItemListContainer />} />
-              <Route path='/contact' element={<h1>Contacto</h1>  } />
+              <Route path='/contact' element={<h1>Contact</h1>  } />
               <Route path='/detail/:IdProducto' element={<ItemDetailContainer />} />
               <Route path='/cart' element={<Cart />} />
               <Route path='/checkout' element={<Checkout />} />

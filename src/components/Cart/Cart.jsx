@@ -19,12 +19,20 @@ export const Cart = () => {
     }else{
         return (
             <div className='cart'>
+                <div className='attributes'>
+                    <h1>Shopping Cart</h1>
+                    <h4>Price</h4>
+                </div>
                 {cart.map(product => <ItemCart key={product.id} product={product} />)} 
                 <div>
-                    <button onClick={clearCart}>Limpiar Carrito</button>
-                    <Link to="/"><button>Agregar mas productos</button></Link>
-                    <Link to="/checkout"><button>Pagar</button></Link>
-                    <div>Total a abonar: $ {totalPrice()}.</div>
+                    <div>
+                        <h3 className='subtotal'> Subtotal: $ {totalPrice()}.</h3>
+                    </div>
+                    <div className='keypad'>
+                    <button onClick={clearCart} className='clearCart'>Clear cart</button>
+                    <Link to="/"><button className='keepBuying'>keep buying</button></Link>
+                    <Link to="/checkout"><button className='toCheckout'>Proceed to Checkout</button></Link>
+                    </div>
                 </div>
             </div>
         )

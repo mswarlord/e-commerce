@@ -3,20 +3,31 @@ import './ItemCart.css';
 import {useCartContext} from '../../context/CartContext'
 
 export const ItemCart = ({product}) => {
+    console.log(product)
     const {removeItem} = useCartContext();
     
     return(
         <div className="ItemCart">
+
             <div className="imgItemCart">
                 <img src={product.img} alt={product.nombre} />
             </div>
+
             <div className="detailItemCart">
-                <div>Producto: {product.nombre}</div>
-                <div>Cantidad: {product.qty}</div>
-                <div>Precio: {product.precio}</div>
-                <div>Subtotal: ${product.qty * product.precio}</div>
-                <button onClick={() => removeItem(product.id)}>Eliminar</button>
+                <div className="firstColumnDetailItemCart">
+                    <div>{product.descripcion}</div>
+                    <div className="commandCart">
+                        <div>Qtty: {product.qty}</div>
+                        <button onClick={() => removeItem(product.id)} className='deleteButton'>Delete</button>
+                    </div>
+                </div>
+                
+                <div className="SecondColumnDetailItemCart">
+                    Price: {product.precio}
+                </div>
+                {/* <div>Subtotal: ${product.qty * product.precio}</div> */}
             </div>
+
         </div>
     )
 }

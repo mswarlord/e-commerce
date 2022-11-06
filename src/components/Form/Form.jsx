@@ -3,9 +3,12 @@ import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { db } from "../../services/firebase";
 import { useCartContext } from "../../context/CartContext";
 import './Form.css'
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from "react-router-dom"
 
 const Form = () => {
-
+    const navigate = useNavigate();
     const { cart, totalPrice, clearCart } = useCartContext();
     const total = totalPrice();
 
@@ -23,7 +26,7 @@ const Form = () => {
         setInputValues({ ...inputValues, [name]: value });
     };
 
-    const finalSale = (e) => {
+    const finishSale = (e) => {
         e.preventDefault();
         const ventasCollection = collection(db, "ventas");
         addDoc(ventasCollection, {
@@ -31,15 +34,28 @@ const Form = () => {
         items: cart,
         date: serverTimestamp(),
         total,
-        }).then(() => {
-            clearCart()
+        }).then((res) => {
+            clearCart();
+            toast.info(`El id de su compra es: ${res.id}`, {
+                position: "top-right",
+                autoClose: 4000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+            });
+            setTimeout(()=>{
+                navigate('/');
+            },0)
         });
     };
 
     return (
         <div className='formContainer'>
             <h2>Total a abonar: $ {totalPrice()}</h2>
-            <form onSubmit={finalSale}>
+            <form onSubmit={finishSale}>
             <input
                 name="name"
                 type="name"
@@ -83,6 +99,7 @@ const Form = () => {
                 required
             />
             <button type="submit">Finalizar Compra</button>
+            <ToastContainer position="top-right" autoClose={4000} newestOnTop={false} hideProgressBar={false} closeOnClick pauseOnFocusLoss rtl={false} draggable pauseOnHover theme="light" />
             </form>
         </div>
     )

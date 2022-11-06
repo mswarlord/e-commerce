@@ -1,8 +1,43 @@
 .cart {
-    background-color: #fafafa;
+    background-color: #cacaca;
     padding: 1rem 0.5rem;
+    min-height: 100vh;
+    padding: 2em;
 }
 
 .EmptyCart {
     color: #999;
+}
+
+.attributes {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    align-items: flex-end;
+    margin: auto;
+}
+
+.subtotal {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.clearCart,
+.keepBuying,
+.toCheckout {
+    border: 0;
+    background: transparent;
+}
+
+.clearCart:hover,
+.keepBuying:hover,
+.toCheckout:hover {
+    color: red;
+}
+
+.keypad {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
 }

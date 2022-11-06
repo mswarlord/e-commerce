@@ -1,18 +1,21 @@
 .ItemCart {
     display: Flex;
-    background-color: #dde;
-    width: 95%;
-    height: 6em;
-    margin: 4px auto;
-    border-radius: 4px;
+    justify-content: space-between;
+    height: 10em;
+    margin: 1em auto;
+    background-color: #eaeaea;
+    padding: 0.7em;
 }
 
 .imgItemCart {
-    height: 100%;
-    width: 6em;
-    padding: 1em;
-    background-color: #edd;
+    background-color: red;
+    width: 135px;
+}
+
+.imgItemCart img {
     border-radius: 4px 0 0 4px;
+    width: auto;
+    height: 100%;
 }
 
 .detailItemCart {
@@ -21,4 +24,27 @@
     height: 100%;
     padding: 0.5em;
     justify-content: space-between;
+    background-color: aquamarine;
+}
+
+.firstColumnDetailItemCart {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.commandCart {
+    display: flex;
+    align-items: flex-end;
+}
+
+.deleteButton {
+    background-color: transparent;
+    border: 0;
+    margin-left: 3em;
+}
+
+.deleteButton:hover {
+    color: red;
 }
