@@ -17,7 +17,7 @@ const ItemDetail = ({ id, img, nombre, descripcion, precio, material, stock, cat
         setEndPurchase(true);
 
         const productToAdd ={
-            id, nombre, precio, qty, img, descripcion 
+            id, nombre, precio, qty, img, descripcion, stock
         }
 
         addItem( productToAdd )

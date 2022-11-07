@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import { addDoc, collection, serverTimestamp, doc, updateDoc } from "firebase/firestore";
 import { db } from "../../services/firebase";
 import { useCartContext } from "../../context/CartContext";
 import './Form.css'
@@ -34,7 +34,7 @@ const Form = () => {
         items: cart,
         date: serverTimestamp(),
         total,
-        }).then((res) => {
+        }).then( res => {
             clearCart();
             toast.info(`El id de su compra es: ${res.id}`, {
                 position: "top-right",
@@ -46,11 +46,19 @@ const Form = () => {
                 progress: undefined,
                 theme: "dark",
             });
+            cart.forEach(prod => {
+                stocksUpdate(prod)
+            })
             setTimeout(()=>{
                 navigate('/');
-            },0)
+            },4000)
         });
     };
+
+    const stocksUpdate = (producto) => {
+        const stockUpdate = doc(db, 'productos', producto.id);
+        updateDoc(stockUpdate,{stock:(producto.stock - producto.qty)})
+    }
 
     return (
         <div className='formContainer'>
