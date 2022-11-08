@@ -18,7 +18,7 @@ Install the dependencies and devDependencies and start the server.
 
 ### Deployment Link ##
 
---- https://tresbastiones-b1abnpcai-mswarlord.vercel.app/
+--- https://tresbastiones-mswarlord.vercel.app/cart
 
 ### Google Drive Link ##
 
