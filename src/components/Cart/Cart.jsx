@@ -19,7 +19,7 @@ export const Cart = () => {
     }else{
         return (
             <div className='cart'>
-                <div className='attributes'>
+                <div className='descriptions'>
                     <h1>Shopping Cart</h1>
                     <h4>Price</h4>
                 </div>
