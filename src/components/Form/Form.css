@@ -6,6 +6,11 @@
     background-color: #333;
     color: #ccc;
     min-height: 80vh;
+    padding: 1em;
+}
+
+.totalPrice {
+    margin: 0 0 1em 0;
 }
 
 .formContainer form {
@@ -21,4 +26,16 @@
     border-radius: 5px;
     border: none;
     margin: 5px;
+}
+
+.finishSaleBtn {
+    background-color: transparent;
+    border: none;
+    font-size: larger;
+    font-weight: 700;
+    margin: 1rem;
+}
+
+.finishSaleBtn:hover {
+    color: #aaa;
 }

@@ -59,16 +59,16 @@ h4 {
     margin: 1rem 2rem;
 }
 
-.detalleAtributo {
+.attribDetail {
     color: #222;
 }
 
-.contadorDetalle {
+.counterDetail {
     text-align: center;
     padding: 1em;
 }
 
-.detalleBotonera {
+.buttonsDetail {
     display: flex;
     padding: 1em;
     justify-content: center;
@@ -76,7 +76,7 @@ h4 {
     justify-content: space-evenly;
 }
 
-.detalleBotonera button {
+.buttonsDetail button {
     background-color: transparent;
     color: aliceblue;
     border: 0;
@@ -85,7 +85,7 @@ h4 {
     transition: 0.5s;
 }
 
-.detalleBotonera button:hover {
+.buttonsDetail button:hover {
     color: #ddd;
     transform: scale(1.1);
 }

@@ -1,8 +1,7 @@
 import './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount'
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import { useCartContext } from '../../context/CartContext'
-import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { NotificationContext } from '../../notification/NotificationService'
 
@@ -36,14 +35,15 @@ const ItemDetail = ({ id, img, nombre, descripcion, precio, material, stock, cat
                     <h2>{nombre}</h2>
                 </div>
                 <h3><span className='detalleDescripcion'>{descripcion}</span></h3>
-                <h4><span className='detalleAtributo'>Precio:</span> ${precio}</h4>
-                <h4><span className='detalleAtributo'>Material:</span> {material}</h4>
-                <h4><span className='detalleAtributo'>Stock:</span> {stock}</h4>
-                <h4><span className='detalleAtributo'>Categoría:</span> {categoria}</h4>
+                <h4><span className='attribDetail'>Precio:</span> ${precio}</h4>
+                <h4><span className='attribDetail'>Material:</span> {material}</h4>
+                <h4><span className='attribDetail'>Stock:</span> {stock}</h4>
+                <h4><span className='attribDetail'>Categoría:</span> {categoria}</h4>
             
                 {
-                    endPurchase ?
-                    <div className='detalleBotonera'>
+                    endPurchase 
+                    ?
+                    <div className='buttonsDetail'>
                         <NavLink to="/">
                             <button>Seguir comprando</button>
                         </NavLink>
@@ -52,7 +52,15 @@ const ItemDetail = ({ id, img, nombre, descripcion, precio, material, stock, cat
                         </NavLink>
                     </div>
                     :
-                    <div className='contadorDetalle'> <ItemCount onAdd={onAdd} initial={1} stock={stock} /> </div>
+                    stock
+                    ? 
+                    <div className='counterDetail'> 
+                        <ItemCount onAdd={onAdd} initial={1} stock={stock} />
+                    </div>
+                    :
+                    <>
+                        <h1>Sin Stock</h1>
+                    </>
                 } 
         </div>
     </article>

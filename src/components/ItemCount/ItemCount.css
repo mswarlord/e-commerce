@@ -1,30 +1,35 @@
-.contenedor__contador{
+.counterContainer {
     color: orangered;
     font-weight: 900;
 }
-.contenedor__contador--contador{
+
+.counterContainer--counter {
     font-weight: 900;
 }
-.btn__contenedor{
-    font-size:large;
+
+.btn__container {
+    font-size: large;
     background-color: transparent;
-    color:#fc652e;
+    color: #fc652e;
     padding: 0.5rem;
     border: none;
     font-weight: 900;
 }
-.cantidad__contador{
-    font-size:large;
-    color:#ecb;
+
+.qtyCount {
+    font-size: large;
+    color: #ecb;
     font-weight: 900;
 }
-.btn__agregar{
+
+.btn__agregar {
     background-color: transparent;
-    color:#ecb;
+    color: #ecb;
     border: none;
     font-weight: 900;
     transition: 0.3s;
 }
-.btn__agregar:hover{
-    color:rgb(216, 78, 10);
+
+.btn__agregar:hover {
+    color: rgb(216, 78, 10);
 }

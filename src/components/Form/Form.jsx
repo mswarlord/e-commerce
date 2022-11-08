@@ -62,7 +62,7 @@ const Form = () => {
 
     return (
         <div className='formContainer'>
-            <h2>Total a abonar: $ {totalPrice()}</h2>
+            <h2 className="totalPrice">Total a abonar: $ {totalPrice()}</h2>
             <form onSubmit={finishSale}>
             <input
                 name="name"
@@ -106,7 +106,7 @@ const Form = () => {
                 onChange={handleOnChange}
                 required
             />
-            <button type="submit">Finalizar Compra</button>
+            <button type="submit" className="finishSaleBtn">Finalizar Compra</button>
             <ToastContainer position="top-right" autoClose={4000} newestOnTop={false} hideProgressBar={false} closeOnClick pauseOnFocusLoss rtl={false} draggable pauseOnHover theme="light" />
             </form>
         </div>
