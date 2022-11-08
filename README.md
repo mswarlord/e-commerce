@@ -12,7 +12,7 @@ Install the dependencies and devDependencies and start the server.
 1.- git clone https://github.com/mswarlord/e-commerce
 2.- cd e-commerce
 3.- npm install
-4.- npm run dev
+4.- npm start
 
 ¡LISTO!
 
