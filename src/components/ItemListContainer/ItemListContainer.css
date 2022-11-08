@@ -1,7 +1,5 @@
 .ItemListContainer {
     width: 100%;
-    background-color: rgb(170, 170, 158);
-    background: radial-gradient(white, lightgray, gray);
     padding: 2em 1em 2em 1em;
 }
 

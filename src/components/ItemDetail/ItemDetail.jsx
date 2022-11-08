@@ -34,34 +34,39 @@ const ItemDetail = ({ id, img, nombre, descripcion, precio, material, stock, cat
                 <div className='tituloProducto'>
                     <h2>{nombre}</h2>
                 </div>
-                <h3><span className='detalleDescripcion'>{descripcion}</span></h3>
-                <h4><span className='attribDetail'>Precio:</span> ${precio}</h4>
-                <h4><span className='attribDetail'>Material:</span> {material}</h4>
-                <h4><span className='attribDetail'>Stock:</span> {stock}</h4>
-                <h4><span className='attribDetail'>Categoría:</span> {categoria}</h4>
-            
-                {
-                    endPurchase 
-                    ?
-                    <div className='buttonsDetail'>
-                        <NavLink to="/">
-                            <button>Seguir comprando</button>
-                        </NavLink>
-                        <NavLink to="/cart">
-                            <button>Finalizar compra</button>
-                        </NavLink>
+                <div className='datailContainer'>
+                    <div className='attributes'>
+                        <h3><span className='detalleDescripcion'>{descripcion}</span></h3>
+                        <h4><span className='attribDetail'>Precio:</span> ${precio}</h4>
+                        <h4><span className='attribDetail'>Material:</span> {material}</h4>
+                        <h4><span className='attribDetail'>Stock:</span> {stock}</h4>
+                        <h4><span className='attribDetail'>Categoría:</span> {categoria}</h4>
                     </div>
-                    :
-                    stock
-                    ? 
-                    <div className='counterDetail'> 
-                        <ItemCount onAdd={onAdd} initial={1} stock={stock} />
+                    <div className='commandContainer'>
+                        {
+                            endPurchase 
+                            ?
+                            <div className='buttonsDetail'>
+                                <NavLink to="/">
+                                    <button>Seguir comprando</button>
+                                </NavLink>
+                                <NavLink to="/cart">
+                                    <button>Finalizar compra</button>
+                                </NavLink>
+                            </div>
+                            :
+                            stock
+                            ? 
+                            <div className='counterDetail'> 
+                                <ItemCount onAdd={onAdd} initial={1} stock={stock} />
+                            </div>
+                            :
+                            <>
+                                <h1 className='withoutStock'>Sin Stock</h1>
+                            </>
+                        } 
                     </div>
-                    :
-                    <>
-                        <h1>Sin Stock</h1>
-                    </>
-                } 
+                </div>
         </div>
     </article>
     )
