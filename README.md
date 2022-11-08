@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# e-commerce
-Repositorio para el desarrollo de un e-commerce haciendo uso de REACT JS para el curso de CODERHOUSE
-=======
 # Facundo Cantero Rodriguez 
 
 ### Tres Bastiones 3D
@@ -22,11 +18,10 @@ Install the dependencies and devDependencies and start the server.
 
 ### Deployment Link ##
 
----
+--- https://tresbastiones-b1abnpcai-mswarlord.vercel.app/
 
 ### Google Drive Link ##
 
 ---
 
 Desarrollado por Facundo Cantero Rodriguez durante la cursada de React en CODERHOUSE en Octubre del 2022.
->>>>>>> tp-final

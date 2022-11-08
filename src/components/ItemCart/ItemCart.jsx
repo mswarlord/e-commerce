@@ -15,7 +15,7 @@ export const ItemCart = ({product}) => {
 
             <div className="detailItemCart">
                 <div className="firstColumnDetailItemCart">
-                    <div>{product.descripcion}</div>
+                    <div className="detailText">{product.descripcion}</div>
                     <div className="commandCart">
                         <div>Qtty: {product.qty}</div>
                         <button onClick={() => removeItem(product.id)} className='deleteButton'>Delete</button>
