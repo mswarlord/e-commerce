@@ -1,0 +1,32 @@
+.NavBrand{
+    font-weight: 700;
+}
+.NavLink{
+    padding: 2px 0 2px 0;
+    margin: 0 1em;
+    white-space: nowrap;
+    color: #bbb;
+}
+.NavBrand:hover, .NavBrand:focus {
+    color: #dde;
+}
+.NavList{
+    display: flex;
+    flex-direction: column;
+}
+
+.NavItem{
+    text-decoration: none;
+    color: #223;
+    padding: 0 0.5rem;
+}
+
+.ActiveNavItem{
+    text-decoration: none;
+    color: #55a;
+    padding: 0 0.8rem;
+}
+
+.NavItem:Hover, .NavItem:Focus{
+    color: #556;
+}

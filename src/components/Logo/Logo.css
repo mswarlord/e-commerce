@@ -1,0 +1,90 @@
+.logoContainer{
+  width: 260px;
+  height: 60px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.logo{
+  position: relative;
+  top:10px;
+  width: 30px;
+  height: 30px;
+}
+
+.tituloLogoContainer{
+  display: flex;
+  flex-direction: column;
+}
+
+.titulo{
+  font-size: x-large;
+  background: -webkit-linear-gradient(right, #ac1106, #fcd640);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+}
+
+.subtitulo{
+  text-align: center;
+  font-size:medium;
+  background: -webkit-linear-gradient(right, #c02425, #f0cb35);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  font-weight: 600;
+  opacity: 95%;
+}
+
+.logo1{
+    background: linear-gradient(to right, #bd1604, #4d0c0c);
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    opacity: 100%;
+    border-radius: 100%;
+    left: -5px;
+    top: -10px;
+}
+
+.logo2{
+  background: linear-gradient(to right, #000000, #0f9b0f); 
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  opacity: 80%;
+  border-radius: 100%;
+  left: 7.5px;
+  top: 5px;
+}
+
+.logo3{
+  background: linear-gradient(to right, #045db6, #01145a);
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  opacity: 55%;
+  border-radius: 100%;
+  left: -12.5px;
+  top: 7.5px;
+}
+
+.logo {
+  pointer-events: none;
+}
+  
+@media (prefers-reduced-motion: no-preference) {
+  .logo {
+    animation: logo-spin infinite 10s linear ;
+  }
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

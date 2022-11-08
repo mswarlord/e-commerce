@@ -1,0 +1,91 @@
+.detalleItem {
+    display: flex;
+    margin: 1rem auto;
+    background: #aaa;
+    width: 90%;
+    border-radius: 6px;
+    color: aliceblue;
+    font-size: larger;
+    position: relative;
+    border: 0px;
+    box-shadow: 0.4rem 0.2rem 1rem #11111188;
+    overflow: hidden;
+    text-align: left;
+    padding: 2em;
+}
+
+.tituloProducto {
+    color: #eef;
+    margin: 1em;
+    text-align: center;
+    color: #213;
+}
+
+.imagenDetailContainer {
+    width: 25%;
+    margin-bottom: 1em;
+    background-color: #559;
+    margin: auto auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.imagenDetailContainer img {
+    border-radius: 4px;
+    width: 100%;
+}
+
+.detalle {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1em;
+}
+
+.detalle h3,
+h4 {
+    color: #335;
+}
+
+.detalle h4 {
+    margin-left: 3rem;
+    font-size: 1.2rem;
+}
+
+.detalleDescripcion {
+    color: #333;
+    margin: 1rem 2rem;
+}
+
+.detalleAtributo {
+    color: #222;
+}
+
+.contadorDetalle {
+    text-align: center;
+    padding: 1em;
+}
+
+.detalleBotonera {
+    display: flex;
+    padding: 1em;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.detalleBotonera button {
+    background-color: transparent;
+    color: aliceblue;
+    border: 0;
+    margin: 0.5em;
+    font-weight: 900;
+    transition: 0.5s;
+}
+
+.detalleBotonera button:hover {
+    color: #ddd;
+    transform: scale(1.1);
+}
