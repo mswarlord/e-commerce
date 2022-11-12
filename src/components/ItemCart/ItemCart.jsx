@@ -22,8 +22,8 @@ export const ItemCart = ({product}) => {
                     </div>
                 </div>
                 
-                <div className="SecondColumnDetailItemCart">
-                    Price: {product.precio}
+                <div className="secondColumnDetailItemCart">
+                    ${product.precio}
                 </div>
                 {/* <div>Subtotal: ${product.qty * product.precio}</div> */}
             </div>
