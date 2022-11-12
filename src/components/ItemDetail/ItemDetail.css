@@ -70,24 +70,15 @@ h4 {
 
 .buttonsDetail {
     display: flex;
-    padding: 1em;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    justify-content: space-evenly;
 }
 
-.buttonsDetail button {
-    background-color: transparent;
-    color: aliceblue;
-    border: 0;
-    margin: 0.5em;
-    font-weight: 900;
-    transition: 0.5s;
-}
-
-.buttonsDetail button:hover {
-    color: #ddd;
-    transform: scale(1.1);
+.buttonDetail {
+    height: 3rem;
+    width: 8rem;
+    margin: 1rem 0;
 }
 
 .withoutStock {

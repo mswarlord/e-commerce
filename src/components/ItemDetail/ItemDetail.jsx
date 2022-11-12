@@ -47,12 +47,8 @@ const ItemDetail = ({ id, img, nombre, descripcion, precio, material, stock, cat
                             endPurchase 
                             ?
                             <div className='buttonsDetail'>
-                                <NavLink to="/">
-                                    <button>Seguir comprando</button>
-                                </NavLink>
-                                <NavLink to="/cart">
-                                    <button>Finalizar compra</button>
-                                </NavLink>
+                                <NavLink to="/"><button className='cartButton buttonDetail'> Keep Buying </button></NavLink>
+                                <NavLink to="/cart"><button className='cartButton buttonDetail'>  Finish Sale </button></NavLink>
                             </div>
                             :
                             stock

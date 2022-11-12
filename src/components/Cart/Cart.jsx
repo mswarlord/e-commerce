@@ -29,9 +29,9 @@ export const Cart = () => {
                         <h3 className='subtotal'> Subtotal: $ {totalPrice()}.</h3>
                     </div>
                     <div className='keypad'>
-                    <button onClick={clearCart} className='clearCart'>Clear cart</button>
-                    <Link to="/"><button className='keepBuying'>keep buying</button></Link>
-                    <Link to="/checkout"><button className='toCheckout'>Proceed to Checkout</button></Link>
+                    <button onClick={clearCart} className='cartButton'>Clear cart</button>
+                    <Link to="/"><button className='cartButton'>keep buying</button></Link>
+                    <Link to="/checkout"><button className='cartButton'>Proceed to Checkout</button></Link>
                     </div>
                 </div>
             </div>

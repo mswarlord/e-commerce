@@ -22,17 +22,18 @@
     justify-content: flex-end;
 }
 
-.clearCart,
-.keepBuying,
-.toCheckout {
+.cartButton {
+    color: aliceblue;
     border: 0;
     background: transparent;
+    background-color: #333;
+    padding: 0.5rem;
+    border-radius: 4px;
 }
 
-.clearCart:hover,
-.keepBuying:hover,
-.toCheckout:hover {
-    color: red;
+.cartButton:hover {
+    color: #333;
+    background-color: #999;
 }
 
 .keypad {

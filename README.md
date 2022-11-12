@@ -1,7 +1,7 @@
 # Facundo Cantero Rodriguez 
 
 ### Tres Bastiones 3D
-This website is powered by React, HTML5, Firebase and Bootstrap 
+This website is powered by React, HTML5, Firebase and Bootstrap
 
 ### Installation
 
@@ -18,7 +18,7 @@ Install the dependencies and devDependencies and start the server.
 
 ### Deployment Link ##
 
---- https://tresbastiones-mswarlord.vercel.app/cart
+--- https://tresbastiones.vercel.app/
 
 ### Google Drive Link ##
 
