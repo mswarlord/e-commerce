@@ -53,9 +53,8 @@
 }
 
 .deleteButton {
-    background-color: transparent;
-    border: 0;
-    margin-left: 3em;
+    margin-left: 1em;
+    font-size: 1.3em;
 }
 
 .deleteButton:hover {

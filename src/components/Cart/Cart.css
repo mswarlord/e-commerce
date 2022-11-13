@@ -31,6 +31,48 @@
     border-radius: 4px;
 }
 
+.iconCartContainer {
+    width: 3em;
+    height: 3em;
+    border: 2px solid;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+
+.containerPayment {
+    background-color: #6d6;
+}
+
+.containerPayment:hover {
+    background-color: #6f6;
+    border: 0;
+}
+
+.containerHome {
+    background-color: #666;
+}
+
+.containerHome:hover {
+    background-color: #999;
+    border: 0;
+}
+
+.containerClear {
+    background-color: #d66;
+}
+
+.containerClear:hover {
+    background-color: #f66;
+    border: 0;
+}
+
+.iconCart {
+    font-size: 2em;
+}
+
 .cartButton:hover {
     color: #333;
     background-color: #999;

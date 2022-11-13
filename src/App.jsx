@@ -9,8 +9,8 @@ import { BrowserRouter, Routes, Route} from "react-router-dom";
 import { CartProvider } from './context/CartContext';
 import { NotificationProvider } from './notification/NotificationService';
 import Checkout from './components/Checkout/Checkout';
-const App = () => {
 
+const App = () => {
   return (
     <div className="App">
       <NotificationProvider>
@@ -21,11 +21,10 @@ const App = () => {
             <Routes>
               <Route path='/' element={<ItemListContainer greeting="Bienvenidos a Tres Bestiones, tu lugar de impresión 3D"/>} /> 
               <Route path='/category/:category' element={<ItemListContainer />} />
-              <Route path='/contact' element={<h1>Contact</h1>  } />
               <Route path='/detail/:IdProducto' element={<ItemDetailContainer />} />
               <Route path='/cart' element={<Cart />} />
               <Route path='/checkout' element={<Checkout />} />
-              <Route path='*' element={<h1>ERROR 404 NOT FOUND</h1> } />
+              <Route path='*' element={<h1 className='error404'>ERROR 404 NOT FOUND</h1> } />
             </Routes>
           </BrowserRouter>
         </CartProvider>

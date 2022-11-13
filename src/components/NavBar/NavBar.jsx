@@ -29,11 +29,8 @@ const NavBar = () => {
                                 </NavLink>
                             </div>
                         </NavDropdown>
-                        <NavLink className='nav-link' to='/ContactUs'> Contacto </NavLink>
-                        <NavLink className='nav-link' to='/JoinUs'> Únete </NavLink>
                     </Nav>
                     <Nav>
-                        <NavLink className='nav-link' to='/LogIn'>Iniciar Sesión </NavLink>
                         <NavLink className='nav-link' to='/cart'>
                                 <CartWidget />
                         </NavLink>

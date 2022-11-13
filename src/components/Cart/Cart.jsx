@@ -2,7 +2,10 @@ import React from 'react'
 import './Cart.css'
 import { useCartContext } from '../../context/CartContext'
 import { Link } from 'react-router-dom'
-import {ItemCart} from '../ItemCart/ItemCart'
+import { ItemCart } from '../ItemCart/ItemCart'
+import { MdClear } from 'react-icons/md';
+import { IoBagCheckOutline } from 'react-icons/io5';
+import { FaHome } from 'react-icons/fa';
 
 export const Cart = () => {
     const {cart, totalPrice, clearCart} = useCartContext();
@@ -29,9 +32,21 @@ export const Cart = () => {
                         <h3 className='subtotal'> Subtotal: $ {totalPrice()}.</h3>
                     </div>
                     <div className='keypad'>
-                    <button onClick={clearCart} className='cartButton'>Clear cart</button>
-                    <Link to="/"><button className='cartButton'>keep buying</button></Link>
-                    <Link to="/checkout"><button className='cartButton'>Proceed to Checkout</button></Link>
+                            <div className='iconCartContainer containerClear'>
+                                <MdClear onClick={clearCart} className='iconCart'/>
+                            </div>
+                        <Link to="/">
+                            <div className='iconCartContainer containerHome'>
+                                <FaHome className='iconCart'/>
+                            </div>
+                        </Link>
+                    
+                        <Link to="/checkout">
+                            <div className='iconCartContainer containerPayment'>
+                                <IoBagCheckOutline className='iconCart' />
+                            </div>
+                        </Link>
+                    
                     </div>
                 </div>
             </div>

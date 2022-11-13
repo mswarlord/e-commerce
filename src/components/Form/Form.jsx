@@ -6,6 +6,7 @@ import './Form.css'
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom"
+import { MdOutlinePayment } from 'react-icons/md';
 
 const Form = () => {
     const navigate = useNavigate();
@@ -106,7 +107,8 @@ const Form = () => {
                 onChange={handleOnChange}
                 required
             />
-            <button type="submit" className="finishSaleBtn">Finalizar Compra</button>
+            <button type="submit" className="finishSaleBtn"><MdOutlinePayment /> Finish Purchase</button>
+            
             <ToastContainer position="top-right" autoClose={4000} newestOnTop={false} hideProgressBar={false} closeOnClick pauseOnFocusLoss rtl={false} draggable pauseOnHover theme="light" />
             </form>
         </div>

@@ -8,7 +8,7 @@ const CartWidget = () => {
     
     return (
         <div to='/cart' className='cartContainer'>
-            <i className="bi bi-cart3"></i>
+            <i className="bi bi-cart3" />
             {quantity}
         </div>
     )

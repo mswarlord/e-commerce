@@ -26,3 +26,7 @@
     background-clip: text;
     -webkit-background-clip: text;
 }
+
+.error404 {
+    margin-top: 3rem;
+}

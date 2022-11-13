@@ -1,6 +1,7 @@
 import React from "react";
 import './ItemCart.css';
 import {useCartContext} from '../../context/CartContext'
+import { FaTrash } from 'react-icons/fa';
 
 export const ItemCart = ({product}) => {
 
@@ -18,15 +19,15 @@ export const ItemCart = ({product}) => {
                     <div className="detailText">{product.descripcion}</div>
                     <div className="commandCart">
                         <div>Qtty: {product.qty}</div>
-                        <button onClick={() => removeItem(product.id)} className='deleteButton'>Delete</button>
+                        <FaTrash onClick={() => removeItem(product.id)} className='deleteButton'/>
                     </div>
                 </div>
                 
                 <div className="secondColumnDetailItemCart">
                     ${product.precio}
                 </div>
-            </div>
 
+            </div>
         </div>
     )
 }

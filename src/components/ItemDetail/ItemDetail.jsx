@@ -2,9 +2,9 @@ import './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount'
 import { useContext, useState } from 'react'
 import { useCartContext } from '../../context/CartContext'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 import { NotificationContext } from '../../notification/NotificationService'
-
+import { FaHome } from "react-icons/fa";
 const ItemDetail = ({ id, img, nombre, descripcion, precio, material, stock, categoria}) => {
 
     const { addItem } = useCartContext();
@@ -48,7 +48,7 @@ const ItemDetail = ({ id, img, nombre, descripcion, precio, material, stock, cat
                             ?
                             <div className='buttonsDetail'>
                                 <NavLink to="/"><button className='cartButton buttonDetail'> Keep Buying </button></NavLink>
-                                <NavLink to="/cart"><button className='cartButton buttonDetail'>  Finish Sale </button></NavLink>
+                                <NavLink to="/cart"><button className='cartButton buttonDetail'>Finish Purchase</button></NavLink>
                             </div>
                             :
                             stock
@@ -57,10 +57,15 @@ const ItemDetail = ({ id, img, nombre, descripcion, precio, material, stock, cat
                                 <ItemCount onAdd={onAdd} initial={1} stock={stock} />
                             </div>
                             :
-                            <>
-                                <h1 className='withoutStock'>Sin Stock</h1>
-                            </>
-                        } 
+                            <div className='outOfStockContainer'>
+                                <h1 className='ouOfStock'>Out of Stock</h1>
+                                <Link to="/">
+                                    <div className='iconCartContainer containerHome'>
+                                        <FaHome className='iconCart'/>
+                                    </div>
+                                </Link>
+                            </div>
+} 
                     </div>
                 </div>
         </div>
